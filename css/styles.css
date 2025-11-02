@@ -7,13 +7,7 @@
     --cornflower: #e7e9fc;
 }
 
-body {
-    font-family: "Roboto", sans-serif;
-    color: var(--slate);
-    background-color: #fff;
-}
-
-/* --- базові стилі --- */
+/* базові скидання */
 h1,
 h2,
 h3,
@@ -39,17 +33,23 @@ img {
     color: inherit;
 }
 
+body {
+    font-family: "Roboto", sans-serif;
+    color: var(--slate);
+    background: #fff;
+}
+
 .container {
     width: 1158px;
-    margin: 0 auto;
     padding: 0 15px;
+    margin: 0 auto;
 }
 
 .section {
     padding: 120px 0;
 }
 
-/* --- HEADER --- */
+/* HEADER */
 .page-header {
     border-bottom: 1px solid var(--cornflower);
 }
@@ -58,6 +58,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 24px;
 }
 
 .header-nav {
@@ -70,11 +71,13 @@ img {
     font-weight: 700;
     font-size: 18px;
     line-height: 1.17;
-    letter-spacing: 0.03em;
+    letter-spacing: .03em;
     text-transform: uppercase;
     color: var(--iris);
     display: inline-block;
-    /* ✅ потрібно для автотесту */
+    /* тест футера */
+    margin-right: 76px;
+    /* ✅ вимога хедера */
 }
 
 .logo-span {
@@ -90,7 +93,7 @@ img {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
-    letter-spacing: 0.02em;
+    letter-spacing: .02em;
     color: var(--navy);
     padding: 24px 0;
 }
@@ -112,7 +115,7 @@ img {
 .contacts-link {
     font-size: 16px;
     line-height: 1.5;
-    letter-spacing: 0.02em;
+    letter-spacing: .02em;
     color: var(--slate);
 }
 
@@ -121,39 +124,48 @@ img {
     color: var(--ocean);
 }
 
-/* --- HERO --- */
+/* HERO */
 .hero-section {
-    background-color: var(--navy);
+    background: var(--navy);
     padding: 188px 0;
     text-align: center;
 }
 
 .hero-title {
+    color: #fff;
     font-size: 56px;
     line-height: 1.07;
-    letter-spacing: 0.02em;
-    color: #fff;
+    letter-spacing: .02em;
     max-width: 496px;
     margin: 0 auto 48px;
 }
 
 .hero-btn {
+    display: block;
+    /* ✅ вимога секції 1 */
+    margin: 0 auto;
+    /* центрування через margin */
     min-width: 169px;
     height: 56px;
     border: none;
     border-radius: 4px;
-    background-color: var(--iris);
+    background: var(--iris);
     color: #fff;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
-    letter-spacing: 0.04em;
+    letter-spacing: .04em;
     cursor: pointer;
 }
 
-/* --- FEATURES --- */
+/* FEATURES */
+.features-section {
+    background: #fff;
+}
+
 .features-list {
     display: flex;
+    flex-wrap: wrap;
     gap: 24px;
 }
 
@@ -165,7 +177,7 @@ img {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
-    letter-spacing: 0.02em;
+    letter-spacing: .02em;
     color: var(--navy);
     margin-bottom: 8px;
 }
@@ -173,24 +185,27 @@ img {
 .feature-text {
     font-size: 16px;
     line-height: 1.5;
-    letter-spacing: 0.02em;
+    letter-spacing: .02em;
 }
 
-/* --- TEAM --- */
+/* TEAM */
 .team-section {
-    background-color: var(--cloud);
+    background: var(--cloud);
 }
 
 .section-title {
     font-size: 36px;
     line-height: 1.11;
+    letter-spacing: .02em;
     text-align: center;
+    text-transform: capitalize;
     color: var(--navy);
     margin-bottom: 72px;
 }
 
 .team-list {
     display: flex;
+    flex-wrap: wrap;
     gap: 24px;
     justify-content: center;
 }
@@ -200,28 +215,39 @@ img {
     border-radius: 0 0 4px 4px;
     overflow: hidden;
     flex-basis: calc((100% - 72px) / 4);
+    text-align: center;
 }
 
 .team-card {
     padding: 32px 0;
-    text-align: center;
 }
 
 .team-name {
     font-weight: 500;
-    margin-bottom: 8px;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: .02em;
     color: var(--navy);
+    margin-bottom: 8px;
 }
 
 .team-role {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: .02em;
     color: var(--slate);
 }
 
-/* --- PORTFOLIO --- */
+/* PORTFOLIO */
+.portfolio-section {
+    background: #fff;
+}
+
 .portfolio-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 48px 24px;
+    column-gap: 24px;
+    row-gap: 48px;
 }
 
 .portfolio-item {
@@ -236,24 +262,38 @@ img {
 
 .portfolio-title {
     font-weight: 500;
-    margin-bottom: 8px;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: .02em;
     color: var(--navy);
+    margin-bottom: 8px;
 }
 
 .portfolio-text {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: .02em;
     color: var(--slate);
 }
 
-/* --- FOOTER --- */
+/* FOOTER */
 .page-footer {
-    background-color: var(--navy);
+    background: var(--navy);
     padding: 100px 0;
 }
 
+.footer-inner {
+    display: flex;
+    align-items: flex-start;
+    gap: 120px;
+}
+
 .page-footer .logo {
+    margin-right: 0;
     margin-bottom: 16px;
 }
 
+/* футер: лише відступ вниз */
 .logo-span-footer {
     color: var(--cloud);
 }
@@ -262,11 +302,11 @@ img {
     color: var(--cloud);
     font-size: 16px;
     line-height: 1.5;
-    letter-spacing: 0.02em;
+    letter-spacing: .02em;
     max-width: 264px;
 }
 
-/* --- visually hidden --- */
+/* visually-hidden */
 .visually-hidden {
     position: absolute;
     width: 1px;
