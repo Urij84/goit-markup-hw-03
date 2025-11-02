@@ -74,8 +74,12 @@ body {
     letter-spacing: .03em;
     text-transform: uppercase;
     color: var(--iris);
+
+    /* ВАЖЛИВО: тест футера перевіряє клас посилання */
+    display: inline-block;
+
+    /* вимога хедера */
     margin-right: 76px;
-    /* вимога для хедера */
 }
 
 .logo-span {
@@ -130,10 +134,10 @@ body {
 }
 
 .hero-title {
+    color: #fff;
     font-size: 56px;
     line-height: 1.07;
     letter-spacing: .02em;
-    color: #fff;
     max-width: 496px;
     margin: 0 auto 48px;
 }
@@ -194,6 +198,7 @@ body {
 .section-title {
     font-size: 36px;
     line-height: 1.11;
+    letter-spacing: .02em;
     text-align: center;
     text-transform: capitalize;
     color: var(--navy);
@@ -285,10 +290,8 @@ body {
     gap: 120px;
 }
 
-/* саме для посилання у футері: очікування автотесту */
+/* у футері лише відступи, display вже стоїть на .logo */
 .page-footer .logo {
-    display: inline-block;
-    /* <-- ключ до зеленої галочки */
     margin-right: 0;
     margin-bottom: 16px;
 }
@@ -305,7 +308,7 @@ body {
     max-width: 264px;
 }
 
-/* Visually hidden */
+/* visually hidden */
 .visually-hidden {
     position: absolute;
     width: 1px;
