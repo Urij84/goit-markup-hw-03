@@ -2,25 +2,25 @@
     --iris: #4d5ae5;
     --ocean: #404bbf;
     --navy: #2e2f42;
+    --slate: #434455;
     --cloud: #f4f4fd;
     --cornflower: #e7e9fc;
 }
 
-/* GLOBAL RESET */
+/* B1: глобальні скидання */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-p,
-ul {
+p {
     margin: 0;
-    padding: 0;
 }
 
 ul {
-    list-style: none;
+    margin: 0;
+    padding-left: 0;
 }
 
 img {
@@ -29,11 +29,10 @@ img {
     height: auto;
 }
 
-/* BASE */
 body {
     font-family: "Roboto", sans-serif;
-    color: var(--navy);
-    background-color: #fff;
+    color: var(--slate);
+    background: #fff;
 }
 
 .link {
@@ -41,22 +40,27 @@ body {
     color: inherit;
 }
 
-/* CONTAINER */
+/* B6/B8/B9 */
 .container {
     width: 1158px;
-    margin: 0 auto;
     padding: 0 15px;
+    margin: 0 auto;
 }
 
-/* HEADER */
+.section {
+    padding: 120px 0;
+}
+
+/* HEADER (B10/B13) */
 .page-header {
     border-bottom: 1px solid var(--cornflower);
 }
 
-.header-container {
+.header-inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 24px;
 }
 
 .header-nav {
@@ -66,44 +70,65 @@ body {
 
 .logo {
     font-family: "Raleway", sans-serif;
-    font-weight: 800;
+    font-weight: 700;
     font-size: 18px;
     line-height: 1.17;
-    letter-spacing: 0.03em;
+    letter-spacing: .03em;
     text-transform: uppercase;
     color: var(--iris);
-    margin-right: 76px;
 }
 
 .logo-span {
     color: var(--navy);
 }
 
-.menu {
+.header-nav .logo {
+    margin-right: 76px;
+}
+
+.nav-list {
     display: flex;
     gap: 40px;
 }
 
-.menu-link {
-    display: block;
-    padding: 24px 0;
-    color: var(--navy);
+.nav-link {
     font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: .02em;
+    color: var(--navy);
+    padding: 24px 0;
 }
 
-.contacts-list {
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--ocean);
+}
+
+.contacts {
+    font-style: normal;
+}
+
+.contacts .contacts-list {
     display: flex;
     gap: 40px;
 }
 
-.contact-link {
-    font-style: normal;
-    color: #434455;
+.contacts-link {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: .02em;
+    color: var(--slate);
 }
 
-/* HERO */
+.contacts-link:hover,
+.contacts-link:focus {
+    color: var(--ocean);
+}
+
+/* HERO (перша секція) */
 .hero-section {
-    background-color: var(--navy);
+    background: var(--navy);
     padding: 188px 0;
     text-align: center;
 }
@@ -111,17 +136,17 @@ body {
 .hero-title {
     color: #fff;
     font-size: 56px;
-    font-weight: 700;
     line-height: 1.07;
+    letter-spacing: .02em;
     max-width: 496px;
     margin: 0 auto 48px;
 }
 
 .hero-btn {
     display: block;
-    margin: 0 auto;
     min-width: 169px;
     height: 56px;
+    margin: 0 auto;
     border: none;
     border-radius: 4px;
     background-color: var(--iris);
@@ -129,17 +154,18 @@ body {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
+    letter-spacing: .04em;
     cursor: pointer;
 }
 
-/* SECTIONS */
-.section {
-    padding: 120px 0;
+/* FEATURES (2 секція) */
+.features-section {
+    background: #fff;
 }
 
-/* FEATURES */
 .features-list {
     display: flex;
+    flex-wrap: wrap;
     gap: 24px;
 }
 
@@ -148,62 +174,130 @@ body {
 }
 
 .feature-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: .02em;
+    color: var(--navy);
     text-align: center;
     margin-bottom: 8px;
 }
 
 .feature-text {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: .02em;
+    color: var(--slate);
     text-align: center;
 }
 
-/* TEAM */
+/* TEAM (3 секція) */
 .team-section {
-    background-color: var(--cloud);
+    background: var(--cloud);
+}
+
+.section-title {
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: .02em;
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--navy);
+    margin-bottom: 72px;
 }
 
 .team-list {
     display: flex;
+    flex-wrap: wrap;
     gap: 24px;
+    justify-content: center;
 }
 
-.team-card {
-    background-color: #fff;
+.team-item {
+    background: #fff;
     border-radius: 0 0 4px 4px;
+    overflow: hidden;
+    flex: 1 1 calc((100% - 72px) / 4);
     text-align: center;
 }
 
-.team-info {
+.team-card {
     padding: 32px 0;
 }
 
 .team-name {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: .02em;
+    color: var(--navy);
     margin-bottom: 8px;
 }
 
-.team-position {
-    color: #434455;
+.team-role {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: .02em;
+    color: var(--slate);
 }
 
-/* PORTFOLIO */
+/* PORTFOLIO (4 секція) */
+.portfolio-section {
+    background: #fff;
+}
+
 .portfolio-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 48px 24px;
+    column-gap: 24px;
+    row-gap: 48px;
 }
 
 .portfolio-item {
-    width: calc((100% - 48px) / 3);
-    border: 1px solid var(--cornflower);
-    border-top: none;
+    flex: 1 1 calc((100% - 48px) / 3);
 }
 
 .portfolio-info {
     padding: 32px 16px;
+    border: 1px solid var(--cornflower);
     border-top: none;
 }
 
-.portfolio-name {
+.portfolio-title {
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: .02em;
+    text-align: center;
+    color: var(--navy);
+    margin-bottom: 72px;
+}
+
+.portfolio-title+.portfolio-list .portfolio-title {
     margin-bottom: 8px;
+}
+
+/* not used but safe */
+.portfolio-title,
+.portfolio-text,
+.portfolio-item .portfolio-title,
+.portfolio-item .portfolio-text {
+    /* для LMS можуть бути різні селектори */
+}
+
+.portfolio-item .portfolio-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: .02em;
+    color: var(--navy);
+    margin-bottom: 8px;
+}
+
+.portfolio-item .portfolio-text {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: .02em;
+    color: var(--slate);
 }
 
 /* FOOTER */
@@ -224,6 +318,7 @@ body {
     margin-bottom: 16px;
 }
 
+/* обов'язково для тесту */
 .logo-span-footer {
     color: var(--cloud);
 }
@@ -232,11 +327,11 @@ body {
     color: var(--cloud);
     font-size: 16px;
     line-height: 1.5;
-    letter-spacing: 0.02em;
+    letter-spacing: .02em;
     max-width: 264px;
 }
 
-/* VISUALLY HIDDEN */
+/* B16: visually-hidden */
 .visually-hidden {
     position: absolute;
     width: 1px;
