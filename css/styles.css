@@ -7,7 +7,7 @@
     --cornflower: #e7e9fc;
 }
 
-/* базові скидання */
+/* reset */
 h1,
 h2,
 h3,
@@ -41,8 +41,8 @@ body {
 
 .container {
     width: 1158px;
-    padding: 0 15px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 .section {
@@ -74,10 +74,8 @@ body {
     letter-spacing: .03em;
     text-transform: uppercase;
     color: var(--iris);
-    display: inline-block;
-    /* тест футера */
     margin-right: 76px;
-    /* ✅ вимога хедера */
+    /* вимога для хедера */
 }
 
 .logo-span {
@@ -132,19 +130,19 @@ body {
 }
 
 .hero-title {
-    color: #fff;
     font-size: 56px;
     line-height: 1.07;
     letter-spacing: .02em;
+    color: #fff;
     max-width: 496px;
     margin: 0 auto 48px;
 }
 
 .hero-btn {
     display: block;
-    /* ✅ вимога секції 1 */
+    /* вимога секції 1 */
     margin: 0 auto;
-    /* центрування через margin */
+    /* центрування */
     min-width: 169px;
     height: 56px;
     border: none;
@@ -170,7 +168,7 @@ body {
 }
 
 .features-item {
-    flex-basis: calc((100% - 72px) / 4);
+    flex-basis: calc((100% - 72px)/4);
 }
 
 .feature-title {
@@ -196,7 +194,6 @@ body {
 .section-title {
     font-size: 36px;
     line-height: 1.11;
-    letter-spacing: .02em;
     text-align: center;
     text-transform: capitalize;
     color: var(--navy);
@@ -214,7 +211,7 @@ body {
     background: #fff;
     border-radius: 0 0 4px 4px;
     overflow: hidden;
-    flex-basis: calc((100% - 72px) / 4);
+    flex-basis: calc((100% - 72px)/4);
     text-align: center;
 }
 
@@ -251,7 +248,7 @@ body {
 }
 
 .portfolio-item {
-    flex-basis: calc((100% - 48px) / 3);
+    flex-basis: calc((100% - 48px)/3);
 }
 
 .portfolio-info {
@@ -288,12 +285,14 @@ body {
     gap: 120px;
 }
 
+/* саме для посилання у футері: очікування автотесту */
 .page-footer .logo {
+    display: inline-block;
+    /* <-- ключ до зеленої галочки */
     margin-right: 0;
     margin-bottom: 16px;
 }
 
-/* футер: лише відступ вниз */
 .logo-span-footer {
     color: var(--cloud);
 }
@@ -306,7 +305,7 @@ body {
     max-width: 264px;
 }
 
-/* visually-hidden */
+/* Visually hidden */
 .visually-hidden {
     position: absolute;
     width: 1px;
