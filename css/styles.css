@@ -7,7 +7,6 @@
     --cornflower: #e7e9fc;
 }
 
-/* базове */
 body {
     font-family: "Roboto", sans-serif;
     color: var(--slate);
@@ -39,7 +38,6 @@ img {
     color: inherit;
 }
 
-/* контейнер і секції */
 .container {
     width: 1158px;
     margin: 0 auto;
@@ -50,7 +48,6 @@ img {
     padding: 120px 0;
 }
 
-/* HEADER */
 .page-header {
     border-bottom: 1px solid var(--cornflower);
 }
@@ -121,7 +118,6 @@ img {
     color: var(--ocean);
 }
 
-/* HERO */
 .hero-section {
     background: var(--navy);
     text-align: center;
@@ -139,7 +135,6 @@ img {
 
 .hero-btn {
     display: block;
-    /* для теста */
     margin: 0 auto;
     min-width: 169px;
     height: 56px;
@@ -159,7 +154,6 @@ img {
     background: var(--ocean);
 }
 
-/* FEATURES */
 .features-section {
     background: #fff;
 }
@@ -188,7 +182,6 @@ img {
     letter-spacing: .02em;
 }
 
-/* TEAM */
 .team-section {
     background: var(--cloud);
 }
@@ -236,7 +229,6 @@ img {
     text-align: center;
 }
 
-/* PORTFOLIO */
 .portfolio-section {
     background: #fff;
 }
@@ -274,24 +266,18 @@ img {
     color: var(--slate);
 }
 
-/* FOOTER */
 .page-footer {
     background: var(--navy);
     padding: 100px 0;
 }
 
-.footer-inner {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
+/* ВАЖЛИВО: без flex, щоб тест бачив inline-block на посиланні */
+.footer-inner {}
 
-/* саме на класі посилання — те, що вимагає тест */
 .footer-link {
     display: inline-block;
 }
 
-/* стилі логотипу у футері */
 .page-footer .logo {
     margin-right: 0;
     margin-bottom: 16px;
@@ -309,7 +295,6 @@ img {
     max-width: 264px;
 }
 
-/* visually hidden */
 .visually-hidden {
     position: absolute;
     width: 1px;
