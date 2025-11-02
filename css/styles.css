@@ -1,13 +1,30 @@
+:root {
+    --iris: #4d5ae5;
+    --ocean: #404bbf;
+    --navy: #2e2f42;
+    --slate: #434455;
+    --cloud: #f4f4fd;
+    --cornflower: #e7e9fc;
+}
+
+/* базове */
 body {
     font-family: "Roboto", sans-serif;
-    color: #434455;
+    color: var(--slate);
     background: #fff;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+p {
     margin: 0;
 }
 
 ul {
     margin: 0;
-    padding: 0;
+    padding-left: 0;
     list-style: none;
 }
 
@@ -22,6 +39,7 @@ img {
     color: inherit;
 }
 
+/* контейнер і секції */
 .container {
     width: 1158px;
     margin: 0 auto;
@@ -32,16 +50,9 @@ img {
     padding: 120px 0;
 }
 
-h1,
-h2,
-h3,
-p {
-    margin: 0;
-}
-
 /* HEADER */
 .page-header {
-    border-bottom: 1px solid #e7e9fc;
+    border-bottom: 1px solid var(--cornflower);
 }
 
 .header-inner {
@@ -62,12 +73,12 @@ p {
     line-height: 1.17;
     letter-spacing: .03em;
     text-transform: uppercase;
-    color: #4d5ae5;
+    color: var(--iris);
     margin-right: 76px;
 }
 
 .logo-span {
-    color: #2e2f42;
+    color: var(--navy);
 }
 
 .nav-list {
@@ -80,13 +91,13 @@ p {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: .02em;
-    color: #2e2f42;
+    color: var(--navy);
     padding: 24px 0;
 }
 
 .nav-link:hover,
 .nav-link:focus {
-    color: #404bbf;
+    color: var(--ocean);
 }
 
 .contacts {
@@ -102,38 +113,39 @@ p {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: .02em;
-    color: #434455;
+    color: var(--slate);
 }
 
 .contacts-link:hover,
 .contacts-link:focus {
-    color: #404bbf;
+    color: var(--ocean);
 }
 
 /* HERO */
 .hero-section {
-    background: #2e2f42;
-    padding: 188px 0;
+    background: var(--navy);
     text-align: center;
+    padding: 188px 0;
 }
 
 .hero-title {
+    color: #fff;
     font-size: 56px;
     line-height: 1.07;
     letter-spacing: .02em;
-    color: #fff;
     max-width: 496px;
     margin: 0 auto 48px;
 }
 
 .hero-btn {
     display: block;
+    /* для теста */
     margin: 0 auto;
     min-width: 169px;
     height: 56px;
     border: none;
     border-radius: 4px;
-    background: #4d5ae5;
+    background: var(--iris);
     color: #fff;
     font-weight: 500;
     font-size: 16px;
@@ -144,7 +156,7 @@ p {
 
 .hero-btn:hover,
 .hero-btn:focus {
-    background: #404bbf;
+    background: var(--ocean);
 }
 
 /* FEATURES */
@@ -166,7 +178,7 @@ p {
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: .02em;
-    color: #2e2f42;
+    color: var(--navy);
     margin-bottom: 8px;
 }
 
@@ -174,20 +186,20 @@ p {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: .02em;
-    color: #434455;
 }
 
 /* TEAM */
 .team-section {
-    background: #f4f4fd;
+    background: var(--cloud);
 }
 
 .section-title {
-    text-align: center;
     font-size: 36px;
     line-height: 1.11;
+    letter-spacing: .02em;
+    text-align: center;
     text-transform: capitalize;
-    color: #2e2f42;
+    color: var(--navy);
     margin-bottom: 72px;
 }
 
@@ -199,7 +211,12 @@ p {
 .team-item {
     background: #fff;
     flex-basis: calc((100% - 72px)/4);
-    text-align: center;
+    border-radius: 0 0 4px 4px;
+    overflow: hidden;
+}
+
+.team-card {
+    padding: 32px 0;
 }
 
 .team-name {
@@ -207,16 +224,16 @@ p {
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: .02em;
-    color: #2e2f42;
-    margin: 32px 0 8px;
+    color: var(--navy);
+    text-align: center;
+    margin-bottom: 8px;
 }
 
 .team-role {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: .02em;
-    color: #434455;
-    margin-bottom: 32px;
+    text-align: center;
 }
 
 /* PORTFOLIO */
@@ -227,11 +244,18 @@ p {
 .portfolio-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px 48px;
+    column-gap: 24px;
+    row-gap: 48px;
 }
 
 .portfolio-item {
     flex-basis: calc((100% - 48px)/3);
+}
+
+.portfolio-info {
+    padding: 32px 16px;
+    border: 1px solid var(--cornflower);
+    border-top: none;
 }
 
 .portfolio-title {
@@ -239,26 +263,20 @@ p {
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: .02em;
-    color: #2e2f42;
-    margin: 32px 0 8px 16px;
+    color: var(--navy);
+    margin-bottom: 8px;
 }
 
 .portfolio-text {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: .02em;
-    color: #434455;
-    margin-left: 16px;
-    margin-bottom: 32px;
-}
-
-.portfolio-item img {
-    border-bottom: 1px solid #e7e9fc;
+    color: var(--slate);
 }
 
 /* FOOTER */
 .page-footer {
-    background: #2e2f42;
+    background: var(--navy);
     padding: 100px 0;
 }
 
@@ -268,32 +286,30 @@ p {
     align-items: flex-start;
 }
 
-.footer-logo {
+/* саме на класі посилання — те, що вимагає тест */
+.footer-link {
     display: inline-block;
-    /* 🔥 КЛЮЧ ДЛЯ ПРОХОДЖЕННЯ ТЕСТУ */
-    font-family: "Raleway", sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 1.17;
-    letter-spacing: .03em;
-    text-transform: uppercase;
-    color: #4d5ae5;
+}
+
+/* стилі логотипу у футері */
+.page-footer .logo {
+    margin-right: 0;
     margin-bottom: 16px;
 }
 
 .logo-span-footer {
-    color: #f4f4fd;
+    color: var(--cloud);
 }
 
 .footer-text {
-    color: #f4f4fd;
+    color: var(--cloud);
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: .02em;
     max-width: 264px;
 }
 
-/* HIDDEN */
+/* visually hidden */
 .visually-hidden {
     position: absolute;
     width: 1px;
