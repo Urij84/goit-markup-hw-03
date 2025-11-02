@@ -295,6 +295,7 @@ body {
 }
 
 .page-footer .logo {
+    display: inline-block;
     margin-right: 0;
     margin-bottom: 16px;
 }
