@@ -1,3 +1,4 @@
+/* ==== Base (твоя типографіка) ==== */
 body {
     font-family: "Roboto", sans-serif;
     color: #434455;
@@ -42,11 +43,6 @@ body {
     color: #404bbf;
 }
 
-.nav-list li:first-child .nav-link:hover,
-.nav-list li:first-child .nav-link:focus {
-    color: #404bbf;
-}
-
 .contacts {
     font-style: normal;
 }
@@ -60,11 +56,6 @@ body {
 
 .contacts-link:hover,
 .contacts-link:focus {
-    color: #404bbf;
-}
-
-.contacts-list li:first-child .contacts-link:hover,
-.contacts-list li:first-child .contacts-link:focus {
     color: #404bbf;
 }
 
@@ -178,4 +169,171 @@ body {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+}
+
+/* ==== B1: дозволені глобальні скидання ==== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ==== B6/B8/B9/B14/B15: контейнер і секції ==== */
+.container {
+    max-width: 1158px;
+    /* B8 */
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    /* центр */
+}
+
+.section {
+    /* B15 */
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+/* B2: уникаємо пробивання зовнішніх відступів */
+.section>*:first-child {
+    margin-top: 0;
+}
+
+.section>*:last-child {
+    margin-bottom: 0;
+}
+
+/* ==== B16: прихований заголовок другої секції ==== */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+/* ==== Header: B10, B13 ==== */
+.page-header {
+    border-bottom: 1px solid rgba(46, 47, 66, 0.08);
+}
+
+/* тонка рамка */
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-list {
+    display: flex;
+    gap: 40px;
+}
+
+.contacts .contacts-list {
+    display: flex;
+    gap: 40px;
+}
+
+/* ==== Hero (без фіксованої висоти — B12) ==== */
+.hero-section {
+    text-align: center;
+}
+
+.hero-title {
+    margin-bottom: 48px;
+}
+
+/* B5 приклад */
+
+/* ==== Features: B10/B11/B12 ==== */
+.features-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.features-list>li {
+    flex: 1 1 calc((100% - 72px) / 4);
+    /* 4 колонки, 3 гепи по 24px */
+}
+
+/* ==== Team: геометрія/сітка ==== */
+.team-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+}
+
+.team-item {
+    flex: 1 1 calc((100% - 72px) / 4);
+    padding-bottom: 32px;
+    /* B4 внутрішній відступ */
+    text-align: center;
+}
+
+.section-title {
+    margin-bottom: 72px;
+}
+
+/* B3/B5 вертикальний ритм */
+
+/* ==== Portfolio: B10, B17 ==== */
+.portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.portfolio-card {
+    flex: 1 1 calc((100% - 48px) / 3);
+    /* 3 колонки, 2 гепи */
+    border-bottom: 1px solid #e7e9fc;
+    /* тільки знизу — B17 */
+}
+
+.portfolio-meta {
+    padding: 32px 16px;
+}
+
+/* B4/B5 */
+
+/* ==== Footer ==== */
+.footer-inner {
+    display: flex;
+    align-items: flex-start;
+    gap: 120px;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
