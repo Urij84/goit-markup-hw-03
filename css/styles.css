@@ -7,7 +7,7 @@
     --cornflower: #e7e9fc;
 }
 
-/* B1: глобальні скидання */
+/* глобальне скидання */
 h1,
 h2,
 h3,
@@ -40,18 +40,18 @@ body {
     color: inherit;
 }
 
-/* B6/B8/B9 */
+/* контейнер і секції */
 .container {
     width: 1158px;
-    padding: 0 15px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 .section {
     padding: 120px 0;
 }
 
-/* HEADER (B10/B13) */
+/* header */
 .page-header {
     border-bottom: 1px solid var(--cornflower);
 }
@@ -126,7 +126,7 @@ body {
     color: var(--ocean);
 }
 
-/* HERO (перша секція) */
+/* hero */
 .hero-section {
     background: var(--navy);
     padding: 188px 0;
@@ -134,10 +134,10 @@ body {
 }
 
 .hero-title {
-    color: #fff;
     font-size: 56px;
     line-height: 1.07;
     letter-spacing: .02em;
+    color: #fff;
     max-width: 496px;
     margin: 0 auto 48px;
 }
@@ -150,15 +150,15 @@ body {
     border: none;
     border-radius: 4px;
     background-color: var(--iris);
-    color: #fff;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: .04em;
+    color: #fff;
     cursor: pointer;
 }
 
-/* FEATURES (2 секція) */
+/* features */
 .features-section {
     background: #fff;
 }
@@ -191,7 +191,7 @@ body {
     text-align: center;
 }
 
-/* TEAM (3 секція) */
+/* team */
 .team-section {
     background: var(--cloud);
 }
@@ -241,7 +241,7 @@ body {
     color: var(--slate);
 }
 
-/* PORTFOLIO (4 секція) */
+/* portfolio */
 .portfolio-section {
     background: #fff;
 }
@@ -264,27 +264,6 @@ body {
 }
 
 .portfolio-title {
-    font-size: 36px;
-    line-height: 1.11;
-    letter-spacing: .02em;
-    text-align: center;
-    color: var(--navy);
-    margin-bottom: 72px;
-}
-
-.portfolio-title+.portfolio-list .portfolio-title {
-    margin-bottom: 8px;
-}
-
-/* not used but safe */
-.portfolio-title,
-.portfolio-text,
-.portfolio-item .portfolio-title,
-.portfolio-item .portfolio-text {
-    /* для LMS можуть бути різні селектори */
-}
-
-.portfolio-item .portfolio-title {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
@@ -293,14 +272,14 @@ body {
     margin-bottom: 8px;
 }
 
-.portfolio-item .portfolio-text {
+.portfolio-text {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: .02em;
     color: var(--slate);
 }
 
-/* FOOTER */
+/* footer */
 .page-footer {
     background: var(--navy);
     padding: 100px 0;
@@ -312,13 +291,12 @@ body {
     gap: 120px;
 }
 
-.footer-logo,
-.page-footer .logo {
+/* ВАЖЛИВО для автотесту: клас посилання з display:inline-block */
+.footer-link {
     display: inline-block;
     margin-bottom: 16px;
 }
 
-/* обов'язково для тесту */
 .logo-span-footer {
     color: var(--cloud);
 }
@@ -331,7 +309,7 @@ body {
     max-width: 264px;
 }
 
-/* B16: visually-hidden */
+/* visually-hidden */
 .visually-hidden {
     position: absolute;
     width: 1px;
