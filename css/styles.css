@@ -75,7 +75,7 @@ body {
     text-transform: uppercase;
     color: var(--iris);
 
-    /* ВАЖЛИВО: тест футера перевіряє клас посилання */
+    /* критично для автотесту футера */
     display: inline-block;
 
     /* вимога хедера */
@@ -144,9 +144,8 @@ body {
 
 .hero-btn {
     display: block;
-    /* вимога секції 1 */
+    /* центрування через margin */
     margin: 0 auto;
-    /* центрування */
     min-width: 169px;
     height: 56px;
     border: none;
@@ -290,7 +289,11 @@ body {
     gap: 120px;
 }
 
-/* у футері лише відступи, display вже стоїть на .logo */
+/* окремий клас на <a> у футері — цього хоче тест */
+.footer-link {
+    display: inline-block;
+}
+
 .page-footer .logo {
     margin-right: 0;
     margin-bottom: 16px;
