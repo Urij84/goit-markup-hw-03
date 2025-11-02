@@ -6,7 +6,7 @@
     --cornflower: #e7e9fc;
 }
 
-/* базова типографіка (твоя) */
+/* базова типографіка */
 body {
     font-family: "Roboto", sans-serif;
     color: var(--slate);
@@ -25,6 +25,70 @@ body {
     color: inherit;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* вимога загальних тестів */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding-left: 0;
+}
+
+/* контейнер і секції */
+.container {
+    width: 1158px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section {
+    padding: 120px 0;
+}
+
+.hero-section.section {
+    padding: 188px 0;
+}
+
+/* перша секція 188px */
+.section>*:first-child {
+    margin-top: 0;
+}
+
+.section>*:last-child {
+    margin-bottom: 0;
+}
+
+/* хедер */
+.page-header {
+    border-bottom: 1px solid #e7e9fc;
+}
+
+/* саме hex як у тесті */
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+}
+
 .logo {
     font-family: "Raleway", sans-serif;
     font-weight: 700;
@@ -39,6 +103,16 @@ body {
     color: var(--navy);
 }
 
+.header-nav .logo {
+    margin-right: 76px;
+}
+
+/* вимога тесту */
+.nav-list {
+    display: flex;
+    gap: 40px;
+}
+
 .nav-link {
     font-weight: 500;
     font-size: 16px;
@@ -46,7 +120,7 @@ body {
     letter-spacing: .02em;
     color: var(--navy);
     padding: 24px 0;
-    /* тест вимагає padding у посилання меню */
+    /* вимога тесту */
 }
 
 .nav-link:hover,
@@ -56,6 +130,11 @@ body {
 
 .contacts {
     font-style: normal;
+}
+
+.contacts .contacts-list {
+    display: flex;
+    gap: 40px;
 }
 
 .contacts-link {
@@ -70,39 +149,51 @@ body {
     color: #404bbf;
 }
 
+/* hero */
 .hero-section {
     background: var(--navy);
+    text-align: center;
 }
 
 .hero-title {
     font-size: 56px;
     line-height: 1.07;
     letter-spacing: .02em;
-    text-align: center;
     color: #fff;
     max-width: 496px;
     margin: 0 auto 48px;
-    /* вимога до ширини h1 */
+    /* центр + обмеження ширини */
 }
 
 .hero-btn {
+    display: block;
+    min-width: 169px;
+    height: 56px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 4px;
+    background-color: #4d5ae5;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: .04em;
     color: #fff;
-    background: var(--iris);
     cursor: pointer;
-    display: block;
-    min-width: 169px;
-    height: 56px;
-    border: none;
-    border-radius: 4px;
-    margin: 0 auto;
 }
 
+/* features (2 секція) */
 .features-section {
     background: #fff;
+}
+
+.features-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.features-list>li {
+    flex: 1 1 calc((100% - 72px)/4);
 }
 
 .feature-title {
@@ -113,7 +204,7 @@ body {
     color: var(--navy);
     text-align: center;
     margin-bottom: 8px;
-    /* тест вимагає 8px */
+    /* обов’язково 8px */
 }
 
 .feature-text {
@@ -124,6 +215,7 @@ body {
     text-align: center;
 }
 
+/* team (3 секція) */
 .team-section {
     background: var(--cloud);
 }
@@ -138,19 +230,32 @@ body {
     margin-bottom: 72px;
 }
 
+.team-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+}
+
 .team-item {
     background: #fff;
     border-radius: 0 0 4px 4px;
     overflow: hidden;
+    flex: 1 1 calc((100% - 72px)/4);
+    text-align: center;
 }
 
+.team-card {
+    padding: 32px 0;
+}
+
+/* контейнер для h3+p */
 .team-name {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: .02em;
     color: var(--navy);
-    text-align: center;
     margin-bottom: 8px;
 }
 
@@ -159,11 +264,30 @@ body {
     line-height: 1.5;
     letter-spacing: .02em;
     color: var(--slate);
-    text-align: center;
 }
 
+/* portfolio (4 секція) */
 .portfolio-section {
     background: #fff;
+}
+
+.portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 48px;
+}
+
+/* саме row-gap */
+.portfolio-item {
+    flex: 1 1 calc((100% - 48px)/3);
+}
+
+.portfolio-info {
+    padding: 32px 16px;
+    border: 1px solid #e7e9fc;
+    border-top: none;
+    /* рамка тільки знизу у підсумку */
 }
 
 .portfolio-title {
@@ -182,8 +306,21 @@ body {
     color: var(--slate);
 }
 
+/* footer */
 .page-footer {
     background: var(--navy);
+    padding: 100px 0;
+}
+
+.footer-inner {
+    display: flex;
+    align-items: flex-start;
+    gap: 120px;
+}
+
+.footer-logo {
+    display: inline-block;
+    margin-bottom: 16px;
 }
 
 .logo-span-footer {
@@ -198,54 +335,7 @@ body {
     max-width: 264px;
 }
 
-/* B1: дозволені глобальні скидання */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-    margin: 0;
-}
-
-ul {
-    margin: 0;
-    padding-left: 0;
-}
-
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
-/* B6/B8/B9/B14/B15: контейнер і секції */
-.container {
-    width: 1158px;
-    padding: 0 15px;
-    margin: 0 auto;
-}
-
-.section {
-    padding: 120px 0;
-}
-
-.hero-section.section {
-    padding: 188px 0;
-}
-
-/* перша секція — 188px */
-.section>*:first-child {
-    margin-top: 0;
-}
-
-/* B2 */
-.section>*:last-child {
-    margin-bottom: 0;
-}
-
-/* B16: патерн прихованого заголовка */
+/* патерн прихованого заголовка (B16) */
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -257,98 +347,4 @@ img {
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
-}
-
-/* Header (B10/B13) */
-.page-header {
-    border-bottom: 1px solid var(--cornflower);
-}
-
-.header-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-}
-
-.header-nav {
-    display: flex;
-    align-items: center;
-}
-
-.header-nav .logo {
-    margin-right: 76px;
-}
-
-/* вимога тесту */
-.nav-list {
-    display: flex;
-    gap: 40px;
-}
-
-.contacts .contacts-list {
-    display: flex;
-    gap: 40px;
-}
-
-/* Features layout */
-.features-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
-}
-
-.features-list>li {
-    flex: 1 1 calc((100% - 72px)/4);
-}
-
-/* Team layout */
-.team-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
-    justify-content: center;
-}
-
-.team-item {
-    flex: 1 1 calc((100% - 72px)/4);
-    text-align: center;
-}
-
-.team-card {
-    padding: 32px 0;
-}
-
-/* відступи всередині контейнера з h3+p */
-
-/* Portfolio layout (з row-gap:48px) */
-.portfolio-list {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 24px;
-    row-gap: 48px;
-}
-
-.portfolio-item {
-    flex: 1 1 calc((100% - 48px)/3);
-}
-
-.portfolio-info {
-    padding: 32px 16px;
-    border: 1px solid var(--cornflower);
-    border-top: none;
-    /* рамка лише знизу у сумі з border контейнера зверху = немає */
-}
-
-/* Footer geometry */
-.footer-inner {
-    display: flex;
-    align-items: flex-start;
-    gap: 120px;
-    padding: 100px 0;
-}
-
-.footer-logo {
-    display: inline-block;
-    margin-bottom: 16px;
 }
